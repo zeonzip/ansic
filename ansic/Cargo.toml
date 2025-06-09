@@ -8,7 +8,7 @@ description = "Ansic is a crate which does ansi parsing in a dynamic DSL and at 
 repository = "https://github.com/zeonzip/ansic"
 homepage = "https://github.com/zeonzip/ansic"
 documentation = "https://docs.rs/ansic"
-keywords = ["parser", "macro", "ansi", "zerocost", "proc-macro", "compile-time"]
+keywords = ["macro", "ansi", "zerocost", "proc-macro", "compile-time"]
 categories = ["development-tools", "text-processing", "command-line-interface"]
 readme = "README.md"
 
