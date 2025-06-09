@@ -2,7 +2,7 @@
 name = "ansic-macros"
 version = "0.1.0"
 authors = ["zeondev"]
-license = "Apache License 2.0"
+license = "Apache-2.0"
 description = "ansic's macros package containing the ansi! macro."
 repository = "https://github.com/zeonzip/ansic"
 homepage = "https://github.com/zeonzip/ansic"
