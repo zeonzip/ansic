@@ -1,0 +1,62 @@
+# Ansic
+*The most efficient and easy ansi styling crate ever!*
+
+Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple and zero cost styling which happens at compiletime, in addition to other ansi utilities.
+
+## Features:
+- Compiletime styling with proc macro
+- Zero cost at runtime
+- Encoded in static str's
+
+## Usage:
+To make a red foreground, bold and underline ansi
+```rust
+ansi!(red bold underline)
+```
+
+All color arguments can take these arguments:
+- "br" - bright
+- "bg" - background
+(rgb can only take bg)
+
+You can chain them like this if we want a red background:
+
+```rust
+ansi!(bg.red bold underline)
+```
+
+Or if you want a red bright background you can do this:
+```rust
+ansi!(bg.br.red bold underline)
+```
+
+In addition we can add a foreground color now that we have a background one. Let's add green!
+```rust
+ansi!(bg.br.red green bold underline)
+```
+
+Idiomatic ansic syntax is also storing styles in constants and using them to style in a much less verbose way:
+
+```rust
+const ERROR: &str = ansi!(br.red bold underline italic);
+const RESET: &str = ansi!(reset);
+
+fn main() {
+    println!("{ERROR}[ERROR]: Hello, world!{RESET}");
+}
+```
+
+Ansic has alot more styles which you can find on our docs.rs page: [Ansic on Docs.rs](https://docs.rs/ansic);
+Ansic also has util macros and functions for more convenient use (listed under Comparisons)
+
+## Comparisons
+
+| Feature  | Ansic | owo-colors | ansi_term |
+| -------- | ----- | ---------- | --------- |
+| FULLY Compile Time Generation  | Yes ✅ | No ❌ |
+| Zero Runtime Cost  | Yes ✅ | No ❌ |
+| Minimal Binary Size | Minimal ✅ | Low ⚠️ |
+| Supports RGB Styles | Yes ✅ | Yes ✅ |
+| No-Std support | Yes ✅ | Yes ✅ |
+| Reusable Style Constants | Yes ✅ | Awkward ⚠️ |
+| Simple Macro DSL | Yes ✅ | No ❌ |

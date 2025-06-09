@@ -1,0 +1,20 @@
+[package]
+name = "ansic-macros"
+version = "0.1.0"
+authors = ["zeondev"]
+license = "Apache 2.0"
+description = "ansic's macros package containing the ansi! macro."
+repository = "https://github.com/zeonzip/ansic"
+homepage = "https://github.com/zeonzip/ansic"
+documentation = "https://docs.rs/ansic"
+keywords = ["parser", "macro", "ansi", "zerocost", "proc-macro", "compile-time"]
+categories = ["development-tools", "text-processing", "command-line-interface"]
+readme = "README.md"
+edition = "2024"
+
+[dependencies]
+proc-macro2 = "1.0.95"
+syn = "2.0.101"
+
+[lib]
+proc-macro = true
