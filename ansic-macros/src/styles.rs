@@ -1,6 +1,6 @@
 // Parsing of styles and colours
 
-use crate::{detect::error, AnsiArg};
+use crate::{AnsiArg, detect::error};
 
 #[repr(u8)]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -12,6 +12,7 @@ pub enum BasicAnsiStyle {
     Italic = 3,
     Underline = 4,
     Blink = 5,
+    RapidBlink = 6,
     Invert = 7,
     Hidden = 8,
     Strikethrough = 9,
@@ -136,6 +137,7 @@ impl AnsiStyle {
             "italic" => Italic,
             "underline" => Underline,
             "blink" => Blink,
+            "rapidblink" => RapidBlink,
             "invert" => Invert,
             "hidden" => Hidden,
             "strikethrough" => Strikethrough,

@@ -13,3 +13,7 @@ categories = ["development-tools", "text-processing", "command-line-interface"]
 readme = "README.md"
 
 [dependencies]
+ansic-macros = "0.1.0"
+
+[features]
+utils = []

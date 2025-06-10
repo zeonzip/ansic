@@ -51,12 +51,17 @@ Ansic also has util macros and functions for more convenient use (listed under C
 
 ## Comparisons
 
-| Feature  | Ansic | owo-colors | ansi_term |
-| -------- | ----- | ---------- | --------- |
-| FULLY Compile Time Generation  | Yes ✅ | No ❌ |
-| Zero Runtime Cost  | Yes ✅ | No ❌ |
-| Minimal Binary Size | Minimal ✅ | Low ⚠️ |
-| Supports RGB Styles | Yes ✅ | Yes ✅ |
-| No-Std support | Yes ✅ | Yes ✅ |
-| Reusable Style Constants | Yes ✅ | Awkward ⚠️ |
-| Simple Macro DSL | Yes ✅ | No ❌ |
+| Feature                     | Ansic ✅           | owo-colors ⚠️/✅     | ansi_term ❌/⚠️      |
+|-----------------------------|--------------------|------------------------|------------------------|
+| FULLY Compile Time Generation | Yes ✅          | No ❌                 | No ❌                 |
+| Zero Runtime Cost           | Yes ✅             | No ❌                | No ❌                |
+| Minimal Binary Size         | Minimal ✅         | Low ⚠️               | Medium ⚠️            |
+| Supports RGB Styles         | Yes ✅             | Yes ✅               | No ❌                |
+| No-Std support              | Yes ✅             | Yes ✅               | Yes ✅               |
+| Reusable Style Constants    | Yes ✅             | Awkward ⚠️          | Partial ⚠️           |
+| Simple Macro DSL            | Yes ✅             | No ❌                | No ❌                |
+| ANSI Reset Handling         | Automatic ✅       | Mostly ⚠️           | Manual ⚠️            |
+| Text Injection              | Yes ✅             | Yes ✅               | Yes ✅               |
+| Extensibility / Custom DSL  | Yes ✅             | No ❌                | No ❌                |
+| Windows Compatibility       | Can be enabled ✅ (via vt_mode!()) | Yes ✅               | Yes ✅               |
+| Well-maintained             | New, active 🚧    | Yes ✅               | Mostly deprecated ⚠️ |
