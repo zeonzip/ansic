@@ -1,3 +1,5 @@
+#![no_std]
+
 /// Contains optional utilities like vt_mode!() and styled!()
 #[cfg(feature = "utils")]
 pub mod utils;
