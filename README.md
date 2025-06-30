@@ -1,12 +1,18 @@
 # Ansic
 *The most efficient and easy ansi styling crate ever!*
 
-Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple and zero cost styling which happens at compiletime, in addition to other ansi utilities.
+Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple and zero cost styling which happens at compiletime, in addition to other ansi utilities. (with default and 100% support for `#[no_std]`)
 
 ## Features:
 - Compiletime styling with proc macro
 - Zero cost at runtime
 - Encoded in static str's
+
+## Why ansic?
+There are tons of other ansi styling crates out there so why `ansic`?
+Ansic is supposed to be for people which are annoyed with the weird nesting and reuseability pattern of other crates and
+which doesn't like that on every single print and use of the ANSI styles, it needs to be processed to get the final style.
+`ansic` solves this is a clean, quick and easy way.
 
 ## Usage:
 To make a red foreground, bold and underline ansi
@@ -55,7 +61,7 @@ Ansic also has util macros and functions for more convenient use (listed under C
 |-----------------------------|--------------------|------------------------|------------------------|
 | FULLY Compile Time Generation | Yes ✅          | No ❌                 | No ❌                 |
 | Zero Runtime Cost           | Yes ✅             | No ❌                | No ❌                |
-| Minimal Binary Size         | Minimal ✅         | Low ⚠️               | Medium ⚠️            |
+| Minimal Binary Size         | Zero extra ✅         | Very Low ⚠️               | Medium ⚠️            |
 | Supports RGB Styles         | Yes ✅             | Yes ✅               | No ❌                |
 | No-Std support              | Yes ✅             | Yes ✅               | Yes ✅               |
 | Reusable Style Constants    | Yes ✅             | Awkward ⚠️          | Partial ⚠️           |
