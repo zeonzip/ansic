@@ -4,6 +4,7 @@
 Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple and zero cost styling which happens at compiletime, in addition to other ansi utilities. (with default and 100% support for `#[no_std]`)
 
 ## Features:
+- Convenient and easy DSL syntax
 - Compiletime styling with proc macro
 - Zero cost at runtime
 - Encoded in static str's
@@ -51,6 +52,8 @@ fn main() {
     println!("{ERROR}[ERROR]: Hello, world!{RESET}");
 }
 ```
+
+Ansic also supports full RGB styles with the color syntax "rgb(r, g, b)".
 
 Ansic has alot more styles which you can find on our docs.rs page: [Ansic on Docs.rs](https://docs.rs/ansic);
 Ansic also has util macros and functions for more convenient use (listed under Comparisons)
