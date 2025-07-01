@@ -8,12 +8,12 @@ Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple 
 - Compiletime styling with proc macro
 - Zero cost at runtime
 - Encoded in static str's
+- #[no_std]
 
 ## Why ansic?
-There are tons of other ansi styling crates out there so why `ansic`?
-Ansic is supposed to be for people which are annoyed with the weird nesting and reuseability pattern of other crates and
-which doesn't like that on every single print and use of the ANSI styles, it needs to be processed to get the final style.
-`ansic` solves this is a clean, quick and easy way.
+There are tons of other ansi styling crates out there, so why `ansic`?
+Ansic is for people who need a ANSI styling crate, and a more efficient and clean alternative.
+Ansic solves this with a simple and very readable reuseability pattern, proc macro DSL, and being fully compile time letting you live without the stress of blowing up binary sizes.
 
 ## Usage:
 To make a red foreground, bold and underline ansi
@@ -46,10 +46,10 @@ Idiomatic ansic syntax is also storing styles in constants and using them to sty
 
 ```rust
 const ERROR: &str = ansi!(br.red bold underline italic);
-const RESET: &str = ansi!(reset);
+const R: &str = ansi!(reset);
 
 fn main() {
-    println!("{ERROR}[ERROR]: Hello, world!{RESET}");
+    println!("{ERROR}[ERROR]: Hello, world!{R}");
 }
 ```
 
