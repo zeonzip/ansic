@@ -10,11 +10,6 @@ Ansic is a crate which adds the ansi! proc macro, which allows for easy, simple 
 - Encoded in static str's
 - #[no_std]
 
-## Why ansic?
-There are tons of other ansi styling crates out there, so why `ansic`?
-Ansic is for people who need a ANSI styling crate, and a more efficient and clean alternative.
-Ansic solves this with a simple and very readable reuseability pattern, proc macro DSL, and being fully compile time letting you live without the stress of blowing up binary sizes.
-
 ## Usage:
 To make a red foreground, bold and underline ansi
 ```rust
@@ -69,8 +64,14 @@ Ansic also has util macros and functions for more convenient use (listed under C
 | No-Std support              | Yes ✅             | Yes ✅               | Yes ✅               |
 | Reusable Style Constants    | Yes ✅             | Awkward ⚠️          | Partial ⚠️           |
 | Simple Macro DSL            | Yes ✅             | No ❌                | No ❌                |
-| ANSI Reset Handling         | Automatic ✅       | Mostly ⚠️           | Manual ⚠️            |
+| ANSI Reset Handling         | Via `styled!` from `utils` ⚠️       | Automatic ✅           | Manual ⚠️            |
 | Text Injection              | Yes ✅             | Yes ✅               | Yes ✅               |
 | Extensibility / Custom DSL  | Yes ✅             | No ❌                | No ❌                |
 | Windows Compatibility       | Can be enabled ✅ (via vt_mode!()) | Yes ✅               | Yes ✅               |
 | Well-maintained             | New, active 🚧    | Yes ✅               | Mostly deprecated ⚠️ |
+
+
+## Why ansic?
+There are tons of other ansi styling crates out there, so why `ansic`?
+Ansic is for people who need a ANSI styling crate, which more efficient, easier for maintainability or `#[no_std]`.
+Ansic solves this with a simple and very readable reuseability pattern, proc macro DSL, and being fully compile time letting you live without the stress of bigger binary sizes.
